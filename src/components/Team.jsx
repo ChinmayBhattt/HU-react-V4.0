@@ -26,7 +26,7 @@ const coreMembers = [
     id: 1,
     name: 'Mohit Sharma',
     role: 'Technical Lead',
-    image: 'public/images/team/mohitsharma.jpg',
+    image: 'images/team/mohitsharma.jpg',
     bio: 'Full-stack developer with expertise in React and Node.js ecosystems.',
     social: {
       linkedin: '#',
@@ -38,7 +38,7 @@ const coreMembers = [
     id: 2,
     name: 'Aditya Dahuja',
     role: 'Technical Lead',
-    image: 'public/images/team/adityadahuja.jpeg',
+    image: 'images/team/adityadahuja.jpeg',
     bio: 'Creative designer focused on building intuitive and accessible user experiences.',
     social: {
       linkedin: '#',
@@ -50,7 +50,7 @@ const coreMembers = [
     id: 3,
     name: 'Kashish Jangid',
     role: 'Community Manager',
-    image: 'public/images/team/kashishjangid.jpeg',
+    image: 'images/team/kashishjangid.jpeg',
     bio: 'Community builder with experience in organizing tech events and hackathons.',
     social: {
       linkedin: '#',
@@ -62,7 +62,7 @@ const coreMembers = [
     id: 4,
     name: 'Lokesh Tak',
     role: 'Sponsorship Outreaching',
-    image: 'public/images/team/lokeshtak.jpeg',
+    image: 'images/team/lokeshtak.jpeg',
     bio: 'Event planning specialist with a passion for creating memorable tech gatherings.',
     social: {
       linkedin: '#',
@@ -74,7 +74,7 @@ const coreMembers = [
     id: 5,
     name: 'Mousam',
     role: 'Design & Media',
-    image: 'public/images/team/mousam.jpeg',
+    image: 'images/team/mousam.jpeg',
     bio: 'Backend specialist with expertise in scalable architecture and database optimization.',
     social: {
       linkedin: '#',
@@ -86,7 +86,7 @@ const coreMembers = [
     id: 6,
     name: 'Bhavya Jain',
     role: 'Design & Media Lead',
-    image: 'public/images/team/bhavyajain.jpeg',
+    image: 'images/team/bhavyajain.jpeg',
     bio: 'Frontend expert focused on creating responsive and accessible user interfaces.',
     social: {
       linkedin: '#',
@@ -98,7 +98,7 @@ const coreMembers = [
     id: 7,
     name: 'Muskan Raj',
     role: 'Documentation',
-    image: 'public/images/team/muskanraj.jpeg',
+    image: 'images/team/muskanraj.jpeg',
     bio: 'Infrastructure specialist with experience in CI/CD pipelines and cloud platforms.',
     social: {
       linkedin: '#',
@@ -110,7 +110,7 @@ const coreMembers = [
     id: 8,
     name: 'Yash Verma',
     role: 'Sponsorship Outreaching',
-    image: 'public/images/team/yashverma.jpg',
+    image: 'images/team/yashverma.jpg',
     bio: 'Creative designer with a passion for creating beautiful and intuitive interfaces.',
     social: {
       linkedin: '#',
@@ -122,7 +122,7 @@ const coreMembers = [
     id: 9,
     name: 'Jyoti',
     role: 'Design & Media',
-    image: 'public/images/team/jyoti.jpeg',
+    image: 'images/team/jyoti.jpeg',
     bio: 'Mobile app specialist with expertise in React Native and cross-platform development.',
     social: {
       linkedin: '#',
@@ -134,7 +134,7 @@ const coreMembers = [
     id: 10,
     name: 'Awantika Jaiswal',
     role: 'Content & Media',
-    image: 'public/images/team/awantikajaiswal.jpg',
+    image: 'images/team/awantikajaiswal.jpg',
     bio: 'Content expert focused on creating engaging and informative technical content.',
     social: {
       linkedin: '#',
@@ -146,7 +146,7 @@ const coreMembers = [
     id: 11,
     name: 'Aryan Jangir',
     role: 'Outreaching',
-    image: 'public/images/team/aryanjangir.jpeg',
+    image: 'images/team/aryanjangir.jpeg',
     bio: 'Data specialist with expertise in machine learning and predictive analytics.',
     social: {
       linkedin: '#',
@@ -158,7 +158,7 @@ const coreMembers = [
     id: 12,
     name: 'Palak Sahani',
     role: 'Design & Media Team',
-    image: 'public/images/team/palaksahani.jpeg',
+    image: 'images/team/palaksahani.jpeg',
     bio: 'Quality assurance expert focused on ensuring robust and reliable software.',
     social: {
       linkedin: '#',
@@ -170,7 +170,7 @@ const coreMembers = [
     id: 13,
     name: 'Janvi Kochar',
     role: 'Content & Media Team',
-    image: 'public/images/team/janvikochar.jpg',
+    image: 'images/team/janvikochar.jpg',
     bio: 'Cybersecurity expert with experience in penetration testing and secure coding.',
     social: {
       linkedin: '#',
@@ -182,7 +182,7 @@ const coreMembers = [
     id: 14,
     name: 'Lakshya Goyal',
     role: 'Video Editor',
-    image: 'public/images/team/lakshyagoyal.jpeg',
+    image: 'images/team/lakshyagoyal.jpeg',
     bio: 'Product specialist focused on delivering user-centered solutions and features.',
     social: {
       linkedin: '#',
@@ -194,7 +194,7 @@ const coreMembers = [
     id: 15,
     name: 'Priya Mathur',
     role: 'Content Maker',
-    image: 'public/images/team/priyamathur.jpg',
+    image: 'images/team/priyamathur.jpg',
     bio: 'Blockchain specialist with expertise in smart contracts and decentralized apps.',
     social: {
       linkedin: '#',
@@ -206,7 +206,7 @@ const coreMembers = [
     id: 16,
     name: 'Yashasvi Saini',
     role: 'Outreaching',
-    image: 'public/images/team/yashasvisaini.jpeg',
+    image: 'images/team/yashasvisaini.jpeg',
     bio: 'Immersive technology expert focused on creating engaging AR/VR experiences.',
     social: {
       linkedin: '#',
@@ -218,7 +218,7 @@ const coreMembers = [
     id: 17,
     name: 'Shorya Pratap',
     role: 'Outreaching',
-    image: 'public/images/team/shoryapratap.jpg',
+    image: 'images/team/shoryapratap.jpg',
     bio: 'AI specialist with expertise in natural language processing and computer vision.',
     social: {
       linkedin: '#',
@@ -230,7 +230,7 @@ const coreMembers = [
     id: 18,
     name: 'Yogita Chugh',
     role: 'Sponsorship & Finance',
-    image: 'public/images/team/yogitachugh.png',
+    image: 'images/team/yogitachugh.png',
     bio: 'User experience researcher focused on understanding user needs and behaviors.',
     social: {
       linkedin: '#',
@@ -242,7 +242,7 @@ const coreMembers = [
     id: 19,
     name: 'Saksham Jain',
     role: 'Video Editor',
-    image: 'public/images/team/sakshamjain.jpg',
+    image: 'images/team/sakshamjain.jpg',
     bio: 'Documentation specialist with a talent for explaining complex technical concepts.',
     social: {
       linkedin: '#',
@@ -254,7 +254,7 @@ const coreMembers = [
     id: 20,
     name: 'Krishna Gupta',
     role: 'Sponsorship & Finance',
-    image: 'public/images/team/krishnagupta.jpg',
+    image: 'images/team/krishnagupta.jpg',
     bio: 'Community specialist focused on fostering engagement and supporting members.',
     social: {
       linkedin: '#',
@@ -271,7 +271,7 @@ const founders = [
     id: 1,
     name: 'Jha Suraj Kumar',
     role: 'Founder',
-    image: 'public/images/jhasurajkumar.jpg',
+    image: 'images/jhasurajkumar.jpg',
     bio: 'Tech entrepreneur with 15+ years of experience in building communities and organizing tech events.',
     social: {
       linkedin: 'https://www.linkedin.com/in/jha-suraj-kumar/',
@@ -283,7 +283,7 @@ const founders = [
     id: 2,
     name: 'Chinmay Bhatt',
     role: 'Co-Founder',
-    image: 'public/images/chinmay.jpg',
+    image: 'images/chinmay.jpg',
     bio: 'Software engineer and hackathon enthusiast with a passion for mentoring the next generation of developers.',
     social: {
       linkedin: 'https://www.linkedin.com/in/chinmaybhattt',

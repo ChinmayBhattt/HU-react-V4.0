@@ -38,37 +38,37 @@ const achievementData = [
 const achievementImages = [
   {
     id: 1,
-    image: 'public/images/achivement-Image/img14.jpeg',
+    image: 'images/achivement-Image/img14.jpeg',
     title: 'Hack Arya Verse 2025',
     description: 'A National Level Hackathon, Organize by Jha Suraj Kumar'
   },
   {
     id: 2,
-    image: 'public/images/achivement-Image/img13.jpg',
+    image: 'images/achivement-Image/img13.jpg',
     title: 'AceHack 4.0 Pre-Meet Up in ACEIT',
     description: 'Organize By Jha Suraj Kumar'
   },
   {
     id: 3,
-    image: 'public/images/achivement-Image/img15.jpeg',
+    image: 'images/achivement-Image/img15.jpeg',
     title: 'Hack Arya Verse 1.0',
     description: 'Main Lead - Jha Suraj Kumar, Succesfully Organize National Hackathon'
   },
   {
     id: 4,
-    image: 'public/images/achivement-Image/img5.jpg',
+    image: 'images/achivement-Image/img5.jpg',
     title: 'Skill Improvement Workshop',
     description: 'Hands-on learning with cutting-edge artificial intelligence technologies by Jha Suraj Kumar'
   },
   {
     id: 5,
-    image: 'public/images/achivement-Image/img18.jpg',
+    image: 'images/achivement-Image/img18.jpg',
     title: 'HAV - Day 2',
     description: 'Connecting developers from around the Country to share knowledge'
   },
   {
     id: 6,
-    image: 'public/images/achivement-Image/img9.jpg',
+    image: 'images/achivement-Image/img9.jpg',
     title: 'Hardware Skill Improvement Workshop',
     description: 'Recognizing breakthrough projects in Arduino technology'
   }
