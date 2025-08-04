@@ -5,7 +5,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 
 // Import components
 import Navbar from './components/Navbar'
-import Hero from './components/hero'
+import Hero from './components/Hero'
 import Achievements from './components/Achievements'
 import Sponsors from './components/Sponsors'
 import Partners from './components/Partners'
