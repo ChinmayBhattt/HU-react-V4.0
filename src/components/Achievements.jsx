@@ -8,28 +8,28 @@ const achievementData = [
     id: 1,
     icon: <TrophyIcon className="h-10 w-10 text-accent" />,
     title: 'Hackathons Organized',
-    value: '25+',
+    value: '8+',
     description: 'Successful hackathons with global participation'
   },
   {
     id: 2,
     icon: <UserGroupIcon className="h-10 w-10 text-accent" />,
     title: 'Community Members',
-    value: '10,000+',
+    value: '500+',
     description: 'Active members from around the world'
   },
   {
     id: 3,
     icon: <BuildingOfficeIcon className="h-10 w-10 text-accent" />,
     title: 'Partner Organizations',
-    value: '50+',
+    value: '4+',
     description: 'Collaborations with leading tech companies'
   },
   {
     id: 4,
     icon: <CalendarIcon className="h-10 w-10 text-accent" />,
     title: 'Events Conducted',
-    value: '100+',
+    value: '15+',
     description: 'Online and offline tech events'
   }
 ];
@@ -119,8 +119,7 @@ const Achievements = () => {
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
@@ -136,8 +135,7 @@ const Achievements = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          animate="visible"
         >
           {achievementData.map((item) => (
             <motion.div
@@ -177,24 +175,22 @@ const Achievements = () => {
         
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <a href="#" className="btn btn-accent inline-flex items-center space-x-2 group">
+          {/* <a href="#" className="btn btn-accent inline-flex items-center space-x-2 group">
             <span>View All Achievements</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </a>
+          </a> */}
         </motion.div>
         
         {/* Achievement Showcase with Images */}
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-24"
         >
@@ -207,8 +203,7 @@ const Achievements = () => {
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: item.id * 0.1 }}
                 className="relative group overflow-hidden rounded-xl h-80"
                 onMouseEnter={() => setHoveredImage(item.id)}

@@ -3,33 +3,33 @@ import { CalendarIcon, MapPinIcon, UserGroupIcon } from '@heroicons/react/24/out
 
 // Mock event data - replace with actual event data in a real application
 const events = [
-  {
-    id: 1,
-    title: 'Annual Hackathon',
-    image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=Hackathon',
-    date: 'October 15-17, 2023',
-    location: 'Tech Hub, New York',
-    attendees: '250+ Participants',
-    description: 'Join us for 48 hours of coding, innovation, and fun. Build projects that solve real-world problems and win amazing prizes!'
-  },
-  {
-    id: 2,
-    title: 'Web3 Workshop Series',
-    image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=Web3+Workshop',
-    date: 'Every Tuesday, Sept-Nov 2023',
-    location: 'Virtual Event',
-    attendees: '500+ Registered',
-    description: 'Learn blockchain development, smart contracts, and decentralized applications in this comprehensive workshop series.'
-  },
-  {
-    id: 3,
-    title: 'AI Summit',
-    image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=AI+Summit',
-    date: 'December 5-7, 2023',
-    location: 'Convention Center, San Francisco',
-    attendees: '1000+ Attendees',
-    description: 'Explore the latest in artificial intelligence, machine learning, and neural networks with industry experts and researchers.'
-  },
+  // {
+  //   id: 1,
+  //   title: 'Annual Hackathon',
+  //   image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=Hackathon',
+  //   date: 'October 15-17, 2023',
+  //   location: 'Tech Hub, New York',
+  //   attendees: '250+ Participants',
+  //   description: 'Join us for 48 hours of coding, innovation, and fun. Build projects that solve real-world problems and win amazing prizes!'
+  // },
+  // {
+  //   id: 2,
+  //   title: 'Web3 Workshop Series',
+  //   image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=Web3+Workshop',
+  //   date: 'Every Tuesday, Sept-Nov 2023',
+  //   location: 'Virtual Event',
+  //   attendees: '500+ Registered',
+  //   description: 'Learn blockchain development, smart contracts, and decentralized applications in this comprehensive workshop series.'
+  // },
+  // {
+  //   id: 3,
+  //   title: 'AI Summit',
+  //   image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=AI+Summit',
+  //   date: 'December 5-7, 2023',
+  //   location: 'Convention Center, San Francisco',
+  //   attendees: '1000+ Attendees',
+  //   description: 'Explore the latest in artificial intelligence, machine learning, and neural networks with industry experts and researchers.'
+  // },
 ];
 
 const Events = () => {
@@ -74,25 +74,23 @@ const Events = () => {
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+          {/* <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
             Upcoming Events
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Join us at our upcoming events to learn, connect, and grow with fellow tech enthusiasts
-          </p>
+          </p> */}
         </motion.div>
 
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          animate="visible"
         >
           {events.map((event) => (
             <motion.div
@@ -166,44 +164,90 @@ const Events = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-16 text-center"
         >
-          <motion.button
+          {/* <motion.button
             variants={buttonVariants}
             initial="rest"
             whileHover="hover"
             whileTap="tap"
             className="btn btn-secondary inline-flex items-center space-x-2"
-          >
-            <span>View All Events</span>
-            <svg 
+          > */}
+            {/* <span>View All Events</span> */}
+            {/* <svg 
               xmlns="http://www.w3.org/2000/svg" 
               className="h-5 w-5" 
               fill="none" 
               viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path 
+              stroke="currentColor" */}
+            {/* > */}
+              {/* <path 
                 strokeLinecap="round" 
                 strokeLinejoin="round" 
                 strokeWidth={2} 
                 d="M17 8l4 4m0 0l-4 4m4-4H3" 
-              />
-            </svg>
-          </motion.button>
+              /> */}
+            {/* </svg> */}
+          {/* </motion.button> */}
         </motion.div>
         
         <motion.div 
-          className="mt-24 text-center"
+          className="w-full mt-24 mb-12"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
         >
-          <p className="text-gray-300 text-lg">Want to host an event with us? <a href="#" className="text-accent hover:underline">Submit your proposal</a></p>
+          <div className="glass-effect rounded-xl border-2 border-accent/40 shadow-2xl overflow-hidden w-full mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              {/* Left side - Image */}
+              <div className="relative h-64 md:h-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
+                <img 
+                  src="images/achivement-Image/img14.jpeg" 
+                  alt="Event organization" 
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute bottom-4 left-4 z-20 bg-accent/90 text-white text-sm font-semibold py-1 px-3 rounded-full">
+                  Event Organizer
+                </div>
+              </div>
+              
+              {/* Right side - Content */}
+              <div className="p-8 md:p-10 flex flex-col justify-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Want to host an event with us?</h3>
+                <p className="text-gray-300 mb-6">Join forces with Hacker's Unity to organize impactful tech events. We provide the platform, community, and expertise to make your event a success.</p>
+                <div className="flex flex-col space-y-4 mb-6">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span className="text-gray-200">Access to our global tech community</span>
+                  </div>
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span className="text-gray-200">Event promotion and marketing support</span>
+                  </div>
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span className="text-gray-200">Technical infrastructure and resources</span>
+                  </div>
+                </div>
+                <a href="https://forms.gle/EtWvEkjnxJrmDDFL8" className="inline-block px-8 py-4 bg-accent text-white font-bold text-lg rounded-lg shadow-lg hover:bg-accent/80 transform hover:scale-105 transition-all duration-300 border border-accent/50 relative overflow-hidden group self-start">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-accent/0 via-white/30 to-accent/0 transform -translate-x-full animate-shimmer"></span>
+                  Submit your proposal
+                  <svg className="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
       

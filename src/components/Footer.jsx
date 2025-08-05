@@ -38,8 +38,7 @@ const Footer = () => {
   return (
     <motion.footer 
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      animate="visible"
       variants={footerVariants}
       className="bg-gradient-to-b from-primary-900 to-primary-950 relative overflow-hidden"
     >
@@ -49,10 +48,10 @@ const Footer = () => {
       <div className="absolute -bottom-24 -left-24 w-48 h-48 rounded-full bg-accent/10 blur-3xl"></div>
       
       <div className="container-custom py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <motion.div 
             variants={itemVariants}
-            className="col-span-1 md:col-span-2"
+            className="col-span-1 md:col-span-5"
           >
             <motion.div 
               variants={itemVariants}
@@ -136,7 +135,7 @@ const Footer = () => {
             </motion.div>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="glass-effect p-5 rounded-lg border border-gray-700/30">
+          <motion.div variants={itemVariants} className="glass-effect p-6 rounded-lg border border-gray-700/30 w-full col-span-1 md:col-span-3">
             <motion.h4 
               variants={itemVariants}
               className="text-lg font-bold mb-4 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent"
@@ -201,50 +200,68 @@ const Footer = () => {
             </motion.ul>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="glass-effect p-5 rounded-lg border border-gray-700/30">
+          <motion.div variants={itemVariants} className="glass-effect p-6 rounded-lg border border-gray-700/30 w-full col-span-1 md:col-span-4">
             <motion.h4 
               variants={itemVariants}
-              className="text-lg font-bold mb-4 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent"
+              className="text-xl font-bold mb-5 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent"
             >
               Contact Us
             </motion.h4>
-            <motion.ul variants={itemVariants} className="space-y-4">
+            <motion.ul variants={itemVariants} className="space-y-5">
               <motion.li variants={itemVariants} className="flex items-start group">
                 <motion.div 
                   variants={iconVariants}
                   whileHover="hover"
-                  className="p-2 bg-primary-dark/70 rounded-full mr-3 text-accent group-hover:text-white group-hover:bg-accent transition-colors"
+                  className="p-2.5 bg-primary-dark/70 rounded-full mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </motion.div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">info@hackersunity.org</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors font-medium text-base">hackerunity.community@gmail.com</span>
               </motion.li>
               <motion.li variants={itemVariants} className="flex items-start group">
                 <motion.div 
                   variants={iconVariants}
                   whileHover="hover"
-                  className="p-2 bg-primary-dark/70 rounded-full mr-3 text-accent group-hover:text-white group-hover:bg-accent transition-colors"
+                  className="p-2.5 bg-primary-dark/70 rounded-full mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
                 </motion.div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">123 Tech Street, San Francisco, CA 94107</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors font-medium text-base">Rajasthan, Jaipur, India</span>
               </motion.li>
               <motion.li variants={itemVariants} className="flex items-start group">
                 <motion.div 
                   variants={iconVariants}
                   whileHover="hover"
-                  className="p-2 bg-primary-dark/70 rounded-full mr-3 text-accent group-hover:text-white group-hover:bg-accent transition-colors"
+                  className="p-2.5 bg-primary-dark/70 rounded-full mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                   </svg>
                 </motion.div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">+91 8852924002</span>
+                <div>
+                  <span className="text-gray-300 group-hover:text-white transition-colors font-medium text-base">+91 9324264950</span>
+                  <p className="text-sm text-gray-400 mt-1">Founder</p>
+                </div>
+              </motion.li>
+              <motion.li variants={itemVariants} className="flex items-start group">
+                <motion.div 
+                  variants={iconVariants}
+                  whileHover="hover"
+                  className="p-2.5 bg-primary-dark/70 rounded-full mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </motion.div>
+                <div>
+                  <span className="text-gray-300 group-hover:text-white transition-colors font-medium text-base">+91 8852924002</span>
+                  <p className="text-sm text-gray-400 mt-1">Co-Founder</p>
+                </div>
               </motion.li>
             </motion.ul>
           </motion.div>

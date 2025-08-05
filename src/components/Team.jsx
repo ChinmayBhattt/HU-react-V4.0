@@ -344,7 +344,8 @@ const Team = () => {
       transition: { 
         type: "spring", 
         stiffness: 100, 
-        damping: 12 
+        damping: 12,
+        duration: 0.5
       }
     }
   };
@@ -358,7 +359,7 @@ const Team = () => {
         type: "spring", 
         stiffness: 100, 
         damping: 10,
-        delay: 0.2
+        duration: 0.5
       }
     },
     hover: { 
@@ -376,25 +377,31 @@ const Team = () => {
   const x = useMotionValue(0);
   const [isHovering, setIsHovering] = useState(false);
 
-  // Start the auto-scrolling animation
+  // Start the auto-scrolling animation immediately on load
   useEffect(() => {
-    if (!isHovering) {
-      carouselControls.start({
-        x: '-300%', // Move to show all team members completely (three full sets)
-        transition: {
-          x: {
-            duration: 90, // Much slower speed to ensure all cards are visible
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "loop",
-            repeatDelay: 0 // No delay between repetitions for seamless loop
+    // Start animation immediately
+    const startAnimation = () => {
+      if (!isHovering) {
+        carouselControls.start({
+          x: '-300%', // Move to show all team members completely (three full sets)
+          transition: {
+            x: {
+              duration: 90, // Much slower speed to ensure all cards are visible
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop",
+              repeatDelay: 0 // No delay between repetitions for seamless loop
+            }
           }
-        }
-      });
-    } else {
-      // Pause the animation when hovering
-      carouselControls.stop();
-    }
+        });
+      } else {
+        // Pause the animation when hovering
+        carouselControls.stop();
+      }
+    };
+    
+    // Start animation immediately
+    startAnimation();
     
     return () => {
       // Cleanup animation when component unmounts
@@ -414,8 +421,7 @@ const Team = () => {
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
@@ -432,8 +438,7 @@ const Team = () => {
         <div className="mb-24">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-3xl font-bold text-center text-white mb-16 relative inline-block"
           >
@@ -445,8 +450,7 @@ const Team = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto"
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            animate="visible"
           >
             {founders.map((founder) => (
               <motion.div
@@ -512,8 +516,7 @@ const Team = () => {
         <div>
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-3xl font-bold text-center text-white mb-16 relative inline-block"
           >
@@ -538,6 +541,8 @@ const Team = () => {
                   key={`${member.id}-${index}`}
                   className="glass-effect rounded-xl p-5 text-center group flex-shrink-0 mx-0.5"
                   style={{ width: '180px' }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { duration: 0.5 } }}
                   whileHover={{
                     scale: 1.05,
                     transition: { duration: 0.3 }
@@ -545,8 +550,16 @@ const Team = () => {
                 >
                   <motion.div 
                     className="mb-6 mx-auto w-28 h-28 rounded-full overflow-hidden border-2 border-secondary/30"
-                    variants={imageVariants}
-                    whileHover="hover"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1, transition: { duration: 0.5 } }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      boxShadow: "0px 10px 25px rgba(79, 70, 229, 0.4)",
+                      transition: { 
+                        duration: 0.3, 
+                        ease: "easeInOut" 
+                      }
+                    }}
                   >
                     <img
                       src={member.image}
@@ -597,8 +610,7 @@ const Team = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-20 text-center bg-gradient-to-r from-secondary/20 to-accent/20 rounded-2xl p-10 max-w-4xl mx-auto"
         >

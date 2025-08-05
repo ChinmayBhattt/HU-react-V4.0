@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
 
-// Mock sponsor logos - replace with actual sponsor images
+// Sponsor logos - including Hoko Ice Cream
 const sponsorLogos = [
-  { id: 1, name: 'Google', logo: 'https://placehold.co/200x100/4F46E5/FFFFFF?text=Google' },
-  { id: 2, name: 'Microsoft', logo: 'https://placehold.co/200x100/4F46E5/FFFFFF?text=Microsoft' },
-  { id: 3, name: 'Amazon', logo: 'https://placehold.co/200x100/4F46E5/FFFFFF?text=Amazon' },
-  { id: 4, name: 'Meta', logo: 'https://placehold.co/200x100/4F46E5/FFFFFF?text=Meta' },
-  { id: 5, name: 'IBM', logo: 'https://placehold.co/200x100/4F46E5/FFFFFF?text=IBM' },
-  { id: 6, name: 'Intel', logo: 'https://placehold.co/200x100/4F46E5/FFFFFF?text=Intel' },
+  { id: 1, name: 'Google', logo: 'https://cdn-icons-png.flaticon.com/512/2875/2875404.png' },
+  { id: 2, name: 'Microsoft', logo: 'images/sponsor/Microsoft.png' },
+  { id: 3, name: 'Hoko Ice Cream', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGQNuA8-teKSw/company-logo_200_200/company-logo_200_200/0/1699446881028/hrpl_restaurants_pvtltd_logo?e=2147483647&v=beta&t=9uP_BHZuSMYfLQQxLQ_xlrgk8EQ0i-qHh8QxUGt3yqM' },
+];
+
+// Community Partners logos
+const communityPartners = [
+  { id: 1, name: 'Reskill', logo: 'https://pbs.twimg.com/profile_images/1535225336581206016/38S_3tKb_400x400.jpg' },
+  { id: 2, name: 'Blockseblock', logo: 'images/community-partners/blockseblock.jpg' },
 ];
 
 const Sponsors = () => {
@@ -34,7 +37,6 @@ const Sponsors = () => {
     },
     hover: {
       scale: 1.05,
-      boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.15)",
       transition: { duration: 0.3 }
     }
   };
@@ -44,8 +46,7 @@ const Sponsors = () => {
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
@@ -58,25 +59,24 @@ const Sponsors = () => {
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16"
+          className="flex flex-wrap justify-center items-center gap-4 mb-16 mx-auto max-w-4xl"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          animate="visible"
+          transition={{ staggerChildren: 0.15, delayChildren: 0.3 }}
         >
           {sponsorLogos.map((sponsor) => (
             <motion.div
               key={sponsor.id}
               variants={itemVariants}
               whileHover="hover"
-              className="flex items-center justify-center p-6 glass-effect rounded-xl relative overflow-hidden group"
+              className="flex items-center justify-center p-4 relative overflow-hidden mx-6 my-4"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <motion.img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="max-h-12 relative z-10"
-                whileHover={{ y: -5 }}
+                className="max-h-20 w-auto relative z-10"
+                whileHover={{ y: -5, scale: 1.15 }}
                 transition={{ duration: 0.3 }}
               />
             </motion.div>
@@ -85,8 +85,7 @@ const Sponsors = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="glass-effect rounded-2xl p-10 text-center max-w-4xl mx-auto relative overflow-hidden"
         >
@@ -95,7 +94,7 @@ const Sponsors = () => {
           
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             className="relative z-10"
           >
@@ -107,7 +106,7 @@ const Sponsors = () => {
               innovators. Reach out to explore sponsorship opportunities.
             </p>
             <motion.a
-              href="#"
+              href="https://forms.gle/FrMc5LyjYvFKv6vB6"
               className="btn btn-accent inline-flex items-center space-x-2 group"
               whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(245, 158, 11, 0.5)" }}
               whileTap={{ scale: 0.95 }}
@@ -129,14 +128,53 @@ const Sponsors = () => {
           </motion.div>
         </motion.div>
         
+        {/* Community Partners Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-center mt-32 mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+            Community Partners
+          </h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            Organizations that collaborate with us to build a stronger tech community
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="flex flex-wrap justify-center items-center gap-4 mb-16 mx-auto max-w-4xl"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ staggerChildren: 0.15, delayChildren: 0.3 }}
+        >
+          {communityPartners.map((partner) => (
+            <motion.div
+              key={partner.id}
+              variants={itemVariants}
+              whileHover="hover"
+              className="flex items-center justify-center p-4 relative overflow-hidden mx-6 my-4"
+            >
+              <motion.img
+                src={partner.logo}
+                alt={partner.name}
+                className="max-h-32 w-auto relative z-10"
+                whileHover={{ y: -5, scale: 1.15 }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="mt-20 text-center"
         >
-          <p className="text-gray-300 text-lg">Interested in becoming a sponsor? Email us at <a href="mailto:hackerunity.community@gmail.com" className="text-accent hover:underline">hackerunity.community@gmail.com</a></p>
+          <p className="text-gray-300 text-lg">Interested in becoming a sponsor or partner? Email us at <a href="mailto:hackerunity.community@gmail.com" className="text-accent hover:underline">hackerunity.community@gmail.com</a></p>
         </motion.div>
       </div>
     </section>

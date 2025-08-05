@@ -52,8 +52,7 @@ const Partners = () => {
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
@@ -69,8 +68,7 @@ const Partners = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          animate="visible"
         >
           {partnerCompanies.map((partner) => (
             <motion.div
@@ -141,8 +139,7 @@ const Partners = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="glass-effect rounded-2xl p-10 text-center max-w-4xl mx-auto relative overflow-hidden"
         >
@@ -151,7 +148,7 @@ const Partners = () => {
           
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             className="relative z-10"
           >
