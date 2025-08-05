@@ -62,9 +62,9 @@ const achievementImages = [
   },
   {
     id: 5,
-    image: 'images/achivement-Image/img18.jpg',
-    title: 'HAV - Day 2',
-    description: 'Connecting developers from around the Country to share knowledge'
+    image: 'images/achivement-Image/wchl2025.jpeg',
+    title: 'WCHL 2025 GLOBAL HACKATHON',
+    description: 'World Computer Hacker League (WCHL) 2025 is a global hackathon led by the ICP HUBS Network.'
   },
   {
     id: 6,
