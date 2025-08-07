@@ -1,35 +1,28 @@
 import { motion } from 'framer-motion';
 import { CalendarIcon, MapPinIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
-// Mock event data - replace with actual event data in a real application
+// Event data
 const events = [
-  // {
-  //   id: 1,
-  //   title: 'Annual Hackathon',
-  //   image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=Hackathon',
-  //   date: 'October 15-17, 2023',
-  //   location: 'Tech Hub, New York',
-  //   attendees: '250+ Participants',
-  //   description: 'Join us for 48 hours of coding, innovation, and fun. Build projects that solve real-world problems and win amazing prizes!'
-  // },
-  // {
-  //   id: 2,
-  //   title: 'Web3 Workshop Series',
-  //   image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=Web3+Workshop',
-  //   date: 'Every Tuesday, Sept-Nov 2023',
-  //   location: 'Virtual Event',
-  //   attendees: '500+ Registered',
-  //   description: 'Learn blockchain development, smart contracts, and decentralized applications in this comprehensive workshop series.'
-  // },
-  // {
-  //   id: 3,
-  //   title: 'AI Summit',
-  //   image: 'https://placehold.co/600x400/4F46E5/FFFFFF?text=AI+Summit',
-  //   date: 'December 5-7, 2023',
-  //   location: 'Convention Center, San Francisco',
-  //   attendees: '1000+ Attendees',
-  //   description: 'Explore the latest in artificial intelligence, machine learning, and neural networks with industry experts and researchers.'
-  // },
+  {
+    id: 1,
+    title: 'WCHL 2025 - World Computer Hacker League',
+    image: 'images/achivement-Image/wchl2025event.jpeg',
+    date: 'July 1 – July 25, 2025',
+    location: '100% Online',
+    attendees: 'Global Participants',
+    description: 'The World Computer Hacker League (WCHL) 2025 is a global hackathon led by the ICP HUBS Network. This 4-month journey ensures teams deliver polished, mainnet-deployed MVPs with direct access to ICP HUBS and DFINITY engineers.',
+    status: 'Completed'
+  },
+  {
+    id: 2,
+    title: 'India Blockchain Month 2025',
+    image: 'images/achivement-Image/INBM.png',
+    date: 'September 2025',
+    location: '20+ Cities Across India',
+    attendees: '73,000+ Expected',
+    description: 'India Blockchain Month (INBM) is the world\'s largest community-led celebration of Web3, Blockchain, AI, and the Open Internet. Spanning 20+ cities — from tech hubs to emerging Tier 2 & 3 towns.',
+    status: 'Upcoming'
+  },
 ];
 
 const Events = () => {
@@ -78,12 +71,12 @@ const Events = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
-          {/* <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Upcoming Events
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+            Our Events
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Join us at our upcoming events to learn, connect, and grow with fellow tech enthusiasts
-          </p> */}
+            Join us at our events to learn, connect, and grow with fellow tech enthusiasts in the blockchain and Web3 space
+          </p>
         </motion.div>
 
         <motion.div 
@@ -107,8 +100,8 @@ const Events = () => {
                   className="w-full h-56 object-cover transition-transform duration-700 ease-in-out"
                   whileHover={{ scale: 1.1 }}
                 />
-                <div className="absolute top-4 right-4 bg-accent/90 text-white text-sm font-semibold py-1 px-3 rounded-full z-20">
-                  Upcoming
+                <div className={`absolute top-4 right-4 ${event.status === 'Completed' ? 'bg-gray-600/90' : 'bg-accent/90'} text-white text-sm font-semibold py-1 px-3 rounded-full z-20`}>
+                  {event.status}
                 </div>
               </div>
               
@@ -134,29 +127,62 @@ const Events = () => {
                   </div>
                 </div>
                 
-                <motion.button
-                  variants={buttonVariants}
-                  initial="rest"
-                  whileHover="hover"
-                  whileTap="tap"
-                  className="btn btn-accent w-full flex items-center justify-center space-x-2 group"
-                >
-                  <span>Register Now</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    className="h-5 w-5 group-hover:translate-x-1 transition-transform" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
+                {event.status !== 'Completed' && (
+                  <motion.a
+                    href="https://www.indiablockchainmonth.com/inbm2025/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variants={buttonVariants}
+                    initial="rest"
+                    whileHover="hover"
+                    whileTap="tap"
+                    className="btn btn-accent w-full flex items-center justify-center space-x-2 group"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M13 7l5 5m0 0l-5 5m5-5H6" 
-                    />
-                  </svg>
-                </motion.button>
+                    <span>Register Now</span>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-5 w-5 group-hover:translate-x-1 transition-transform" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                      />
+                    </svg>
+                  </motion.a>
+                )}
+                {event.status === 'Completed' && (
+                  <motion.a
+                    href="https://dorahacks.io/hackathon/wchl25-qualification-round/detail"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variants={buttonVariants}
+                    initial="rest"
+                    whileHover="hover"
+                    whileTap="tap"
+                    className="btn btn-secondary w-full flex items-center justify-center space-x-2 group cursor-pointer"
+                  >
+                    <span>View Details</span>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-5 w-5 group-hover:translate-x-1 transition-transform" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                      />
+                    </svg>
+                  </motion.a>
+                )}
               </div>
             </motion.div>
           ))}

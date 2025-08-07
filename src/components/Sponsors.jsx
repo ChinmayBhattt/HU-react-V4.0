@@ -9,8 +9,9 @@ const sponsorLogos = [
 
 // Community Partners logos
 const communityPartners = [
-  { id: 1, name: 'Reskill', logo: 'https://pbs.twimg.com/profile_images/1535225336581206016/38S_3tKb_400x400.jpg' },
-  { id: 2, name: 'Blockseblock', logo: 'images/community-partners/blockseblock.jpg' },
+  { id: 1, name: 'Blockseblock', logo: 'images/community-partners/blockseblock.jpg' },
+  { id: 2, name: 'BlockOn', logo: 'images/community-partners/blockon.png' },
+  { id: 3, name: 'Reskill', logo: 'https://pbs.twimg.com/profile_images/1535225336581206016/38S_3tKb_400x400.jpg' },
 ];
 
 const Sponsors = () => {
